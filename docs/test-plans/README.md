@@ -40,4 +40,4 @@ e.g. oscillation, motor temperature, unexpected mode change, battery < 3.5 V/cel
 
 | ID | Title | Status | Report |
 |---|---|---|---|
-| | | | |
+| [TP-001](TP-001_first-outdoor-flight-gnss.md) | First outdoor flight and GNSS verification | planned | |
