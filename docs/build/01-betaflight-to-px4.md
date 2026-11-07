@@ -74,10 +74,10 @@ Both problems were in the wiring, and both looked like configuration problems at
 
 | | |
 |---|---|
-| Symptom | ESC did not work as expected |
+| Symptom | no reaction from the ESC at all, and no increased current draw that would indicate a short |
 | First suspicion | wrong ESC configuration, or ESC damaged by heat during soldering |
 | Cause | one bent pin in the ESC-to-FC connector. The stack was bought used, and the pin was not noticed at first |
-| Solution | pin straightened, connector checked |
+| Solution | pin carefully straightened with tweezers, connector reseated. The connector is now left plugged in, because the pin is already pre-stressed |
 
 ### 2. Short circuit in the telemetry cable
 
@@ -93,7 +93,8 @@ Both problems were in the wiring, and both looked like configuration problems at
 
 - Check the physical layer first. A visually fine connector proves nothing; measure each contact before debugging configuration.
 - Inspect used components, connectors included, before installation.
-- Know the expected behaviour of a link before debugging it. A working MAVLink link loads the full parameter list and streams telemetry continuously; a trickle of data points to a hardware problem.
+- Partial function points to hardware. A wrong port or baud rate setting typically gives no link at all; data that arrives only sporadically is more likely a physical fault.
+- Current draw is a quick diagnostic. No increase in current ruled out a short and pointed to a missing signal connection.
 
 ## First hover
 
