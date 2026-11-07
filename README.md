@@ -8,7 +8,6 @@ The goal is a well-tuned, GNSS-capable 5" platform that flies autonomous mission
 
 | Phase | State |
 |---|---|
-| ArduPilot trial on the original F405 FC | done, 2026-11-01 |
 | Hardware migration to H743 and PX4 | done, 2026-11-05 |
 | Sensor calibration, RC, telemetry, actuator setup | done |
 | First indoor hover | done, 2026-11 |
@@ -23,12 +22,12 @@ The goal is a well-tuned, GNSS-capable 5" platform that flies autonomous mission
 | Component | Part |
 |---|---|
 | Frame | 5" FPV quadcopter frame |
-| Motors | iFlight XING2 2207, 1855 KV |
+| Motors | iFlight XING2 2306, 1855 KV |
 | Flight controller | MicoAir H743 V2 |
 | ESC | MicoAir 55 A, AM32 firmware |
 | Motor protocol | DShot600, bidirectional (eRPM telemetry) |
 | GNSS / compass | HGLRC M100-5883 |
-| Telemetry | Holybro Telemetry Radio V3 (433 MHz), MAVLink |
+| Telemetry | Holybro Telemetry Radio V3 (433 MHz, TX power being reduced to EU limit), MAVLink |
 | RC link | ExpressLRS (CRSF) |
 | Autopilot | PX4 v1.17.0 |
 | Ground control | QGroundControl (macOS) |
