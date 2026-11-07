@@ -93,7 +93,7 @@ Both problems were in the wiring, and both looked like configuration problems at
 
 - Check the physical layer first. A visually fine connector proves nothing; measure each contact before debugging configuration.
 - Inspect used components, connectors included, before installation.
-- Know the expected behaviour of a link before debugging it. A working MAVLink connection loads the full parameter list within seconds; a trickle of data points to a hardware problem.
+- Know the expected behaviour of a link before debugging it. A working MAVLink link loads the full parameter list and streams telemetry continuously; a trickle of data points to a hardware problem.
 
 ## First hover
 
