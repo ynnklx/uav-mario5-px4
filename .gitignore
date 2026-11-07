@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# Local raw data (original photos, all logs). Never committed.
+raw/
+
+# Original photo formats. Only resized, EXIF-stripped JPGs go into the repo.
+*.HEIC
+*.heic
+
+# Backups
+*.bak
