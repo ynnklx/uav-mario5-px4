@@ -66,7 +66,34 @@ Motor mapping after the actuator test: output 1 = motor 1, output 2 = motor 4, o
 6. Power: 6S, 1300 mAh
 7. Telemetry radio on MAVLink, failsafe on RC loss: Return
 
-<!-- TODO (Yannik): problems during PX4 setup and how they were solved -->
+## Problems and solutions
+
+Both problems were in the wiring, and both looked like configuration problems at first.
+
+### 1. Bent pin in the ESC connector
+
+| | |
+|---|---|
+| Symptom | ESC did not work as expected |
+| First suspicion | wrong ESC configuration, or ESC damaged by heat during soldering |
+| Cause | one bent pin in the ESC-to-FC connector. The stack was bought used, and the pin was not noticed at first |
+| Solution | pin straightened, connector checked |
+
+### 2. Short circuit in the telemetry cable
+
+| | |
+|---|---|
+| Symptom | QGroundControl received data only sporadically and at very low throughput |
+| First suspicion | MAVLink or serial port configuration. Without prior MAVLink experience the expected behaviour was not known, so a weak link did not look obviously wrong |
+| Cause | the crimp contacts in the self-made JST-SH connector shorted TX and RX. The connector looked fine visually |
+| Found by | continuity test of each contact with a multimeter |
+| Solution | cable re-crimped |
+
+### Lessons
+
+- Check the physical layer first. A visually fine connector proves nothing; measure each contact before debugging configuration.
+- Inspect used components, connectors included, before installation.
+- Know the expected behaviour of a link before debugging it. A working MAVLink connection loads the full parameter list within seconds; a trickle of data points to a hardware problem.
 
 ## First hover
 
