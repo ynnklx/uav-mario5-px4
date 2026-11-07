@@ -10,7 +10,7 @@ The goal is a well-tuned, GNSS-capable 5" platform that flies autonomous mission
 |---|---|
 | Hardware migration to H743 and PX4 | done, 2026-11-05 |
 | Sensor calibration, RC, telemetry, actuator setup | done |
-| First indoor hover | done, 2026-11 |
+| First indoor hover | done, 2026-11-06 |
 | Rate controller tuning (PID) | next |
 | Position / altitude controller tuning | planned |
 | Short autonomous mission | planned |

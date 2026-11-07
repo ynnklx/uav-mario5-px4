@@ -1,6 +1,6 @@
 # 01: Migration from Betaflight to PX4
 
-**Period:** 2026-11-04 to 2026-11-05
+**Period:** 2026-11-04 to 2026-11-06
 **Result:** aircraft rebuilt on a new flight stack, all systems working, first indoor hover successful
 
 The aircraft started as a Betaflight FPV quad. For GNSS navigation, missions and MAVLink telemetry it was rebuilt on a flight controller with enough resources for a full autopilot and moved to PX4.
@@ -95,7 +95,14 @@ Check connectors first: inspect and measure every contact, question pin assignme
 
 ## First hover
 
-<!-- TODO (Yannik): date, indoor location type, flight mode, duration, observations -->
+| | |
+|---|---|
+| Date | 2026-11-06 |
+| Location | indoor |
+| Flight mode | Stabilized |
+| Checked | arm switch, kill switch, flight mode selection |
+| Result | stable hover, no noticeable oscillation |
+| Conclusion | ready for outdoor testing |
 
 Parameter set: [`params/2026-11-05_01_baseline-pre-tune.params`](../../params/2026-11-05_01_baseline-pre-tune.params)
 
