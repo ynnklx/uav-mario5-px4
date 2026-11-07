@@ -89,12 +89,9 @@ Both problems were in the wiring, and both looked like configuration problems at
 | Found by | continuity test of each contact with a multimeter |
 | Solution | cable re-crimped |
 
-### Lessons
+### Lesson
 
-- Check the physical layer first. A visually fine connector proves nothing; measure each contact before debugging configuration.
-- Inspect used components, connectors included, before installation.
-- Partial function points to hardware. A wrong port or baud rate setting typically gives no link at all; data that arrives only sporadically is more likely a physical fault.
-- Current draw is a quick diagnostic. No increase in current ruled out a short and pointed to a missing signal connection.
+Check connectors first: inspect and measure every contact, question pin assignments and connections before searching for the fault in the configuration.
 
 ## First hover
 
