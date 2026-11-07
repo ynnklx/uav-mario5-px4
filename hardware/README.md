@@ -24,7 +24,7 @@
 
 ## Wiring
 
-Wiring diagram: tbd (`hardware/wiring.png`)
+All peripherals on the ports intended by the [MicoAir743v2 documentation](https://micoair.com/flightcontroller_micoair743v2/). Port and UART table: [build log, section Wiring](../docs/build/01-betaflight-to-px4.md#wiring)
 
 ## Photos
 

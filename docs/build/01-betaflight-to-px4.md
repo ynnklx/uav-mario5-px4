@@ -39,7 +39,22 @@ The aircraft started as a Betaflight FPV quad. For GNSS navigation, missions and
 | ![FC, GNSS, telemetry](../../hardware/photos/2026-11-04_05_fc-gnss-telemetry-wiring.jpg) | ![Assembled](../../hardware/photos/2026-11-04_06_assembled.jpg) |
 | FC stacked, GNSS and telemetry radio connected | Assembled, battery on top |
 
-<!-- TODO (Yannik): notes on wiring and UART assignment, anything that went wrong during assembly -->
+## Wiring
+
+All peripherals are connected to the ports intended for them in the [MicoAir743v2 documentation](https://micoair.com/flightcontroller_micoair743v2/). Port assignment as configured in PX4:
+
+| Device | FC port | UART | PX4 setting |
+|---|---|---|---|
+| Holybro Telemetry Radio V3 | TELEM1 | UART1 | `MAV_0_CONFIG = 101`, `SER_TEL1_BAUD = 57600` |
+| HGLRC M100-5883, GNSS | GPS1 | UART3 | `GPS_1_CONFIG = 201` |
+| HGLRC M100-5883, compass | I2C | I2C1 | external, `CAL_MAG1_PRIO = 50` |
+| ExpressLRS receiver (CRSF) | RC | UART6 (RX6 + TX6) | `RC_PORT_CONFIG = 300` |
+| MicoAir 55 A ESC | ESC connector | PWM outputs 1 to 4 | DShot600 (`PWM_MAIN_TIM0 = -3`), bidirectional |
+| Battery voltage / current | ESC connector | ADC | `BAT1_V_DIV = 21.08`, `BAT1_A_PER_V = 40` |
+
+The onboard QMC5883L compass is calibrated but disabled (`CAL_MAG0_PRIO = 0`). Heading comes from the compass in the GNSS module, which sits further away from the power wiring.
+
+Motor mapping after the actuator test: output 1 = motor 1, output 2 = motor 4, output 3 = motor 3, output 4 = motor 2.
 
 ## Configuration in QGroundControl
 
