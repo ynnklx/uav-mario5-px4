@@ -16,12 +16,6 @@ git diff --no-index params/<old>.params params/<new>.params
 |---|---|---|---|
 | [`2026-11-05_01_baseline-pre-tune.params`](2026-11-05_01_baseline-pre-tune.params) | PX4 1.17.0 | State after migration, first indoor hover | first hover |
 
-### Legacy (before the rebuild)
-
-| File | Firmware | Description |
-|---|---|---|
-| [`legacy/2026-11-01_betaflight_speedybeef405v4_cli-dump.txt`](legacy/2026-11-01_betaflight_speedybeef405v4_cli-dump.txt) | Betaflight 2026.6.1 | Full CLI dump of the original configuration |
-
 ## Baseline: notable settings
 
 Settings in the baseline that are relevant for the upcoming tuning work.

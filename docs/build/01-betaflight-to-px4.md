@@ -16,8 +16,6 @@ The aircraft started as a Betaflight FPV quad. For GNSS navigation, missions and
 | GNSS | GEP-M10, no compass |
 | Battery | 6S 1300 mAh |
 
-Full configuration backup before the rebuild: [`params/legacy/2026-11-01_betaflight_speedybeef405v4_cli-dump.txt`](../../params/legacy/2026-11-01_betaflight_speedybeef405v4_cli-dump.txt)
-
 ## What changed
 
 | Component | Before | After |
