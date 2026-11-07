@@ -8,7 +8,8 @@ The goal is a well-tuned, GNSS-capable 5" platform that flies autonomous mission
 
 | Phase | State |
 |---|---|
-| Hardware migration (Betaflight → PX4 stack) | done |
+| ArduPilot trial on the original F405 FC | done, 2026-11-01 |
+| Hardware migration to H743 and PX4 | done, 2026-11-05 |
 | Sensor calibration, RC, telemetry, actuator setup | done |
 | First indoor hover | done, 2026-11 |
 | Rate controller tuning (PID) | next |
@@ -26,15 +27,17 @@ The goal is a well-tuned, GNSS-capable 5" platform that flies autonomous mission
 | Flight controller | MicoAir H743 V2 |
 | ESC | MicoAir 55 A, AM32 firmware |
 | Motor protocol | DShot600, bidirectional (eRPM telemetry) |
-| GNSS / compass | HGLRC M100 |
-| Telemetry | Holybro Telemetry Radio V3, MAVLink |
+| GNSS / compass | HGLRC M100-5883 |
+| Telemetry | Holybro Telemetry Radio V3 (433 MHz), MAVLink |
 | RC link | ExpressLRS (CRSF) |
 | Autopilot | PX4 v1.17.0 |
 | Ground control | QGroundControl (macOS) |
 | Battery | 6S 1300 mAh LiPo |
 | Not installed currently | DJI O3 Air Unit |
 
-Details, wiring and photos: [`hardware/`](hardware/)
+![Mario5 assembled](hardware/photos/2026-11-04_06_assembled.jpg)
+
+Details and photos: [`hardware/`](hardware/) · Build log: [`docs/build/01-betaflight-to-px4.md`](docs/build/01-betaflight-to-px4.md)
 
 ## Repository layout
 

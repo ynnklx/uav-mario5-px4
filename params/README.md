@@ -2,7 +2,7 @@
 
 Every parameter set flown is exported from QGroundControl and stored here.
 
-**Naming:** `YYYY-MM-DD_NN_short-description.params`, e.g. `2026-11-07_01_baseline-pre-tune.params`
+**Naming:** `YYYY-MM-DD_NN_short-description.params`, e.g. `2026-11-05_01_baseline-pre-tune.params`
 
 **Compare two states:**
 
@@ -14,7 +14,15 @@ git diff --no-index params/<old>.params params/<new>.params
 
 | File | Firmware | Description | Flown in |
 |---|---|---|---|
-| `2026-11-07_01_baseline-pre-tune.params` | PX4 1.17.0 | State after migration, first indoor hover | first hover |
+| [`2026-11-05_01_baseline-pre-tune.params`](2026-11-05_01_baseline-pre-tune.params) | PX4 1.17.0 | State after migration, first indoor hover | first hover |
+
+### Legacy (before PX4)
+
+| File | Firmware | Description |
+|---|---|---|
+| [`legacy/2026-11-01_betaflight_speedybeef405v4_cli-dump.txt`](legacy/2026-11-01_betaflight_speedybeef405v4_cli-dump.txt) | Betaflight 2026.6.1 | Full CLI dump of the original configuration |
+| [`legacy/2026-11-01_ardupilot-4.7.2_f405_stock.params`](legacy/2026-11-01_ardupilot-4.7.2_f405_stock.params) | ArduCopter 4.7.2 | After first flash, before setup |
+| [`legacy/2026-11-01_ardupilot-4.7.2_f405_pretune.params`](legacy/2026-11-01_ardupilot-4.7.2_f405_pretune.params) | ArduCopter 4.7.2 | 5" starting values used for flight 2 |
 
 ## Baseline: notable settings
 
