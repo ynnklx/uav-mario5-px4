@@ -8,7 +8,7 @@
 | Motors | iFlight XING2 2306, 1855 KV | 14 poles (`MOT_POLE_COUNT = 14`) |
 | Propellers | tbd | baseline for the propeller comparison |
 | Flight controller | MicoAir H743 V2 | STM32H743, onboard compass QMC5883L |
-| ESC | MicoAir 55 A, AM32 | bidirectional DShot600, 1000 µF capacitor on battery pads |
+| ESC | MicoAir 55 A, AM32 | bidirectional DShot300, 1000 µF capacitor on battery pads |
 | GNSS / compass | HGLRC M100-5883 | QMC5883 compass |
 | Telemetry radio | Holybro Telemetry Radio V3, 433 MHz | MAVLink to QGroundControl. Ships with 100 mW; TX power is being reduced to the EU SRD limit of 10 mW ERP |
 | RC receiver | ExpressLRS | CRSF protocol (`RC_INPUT_PROTO = 6`) |

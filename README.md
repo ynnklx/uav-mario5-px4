@@ -25,7 +25,7 @@ The goal is a well-tuned, GNSS-capable 5" platform that flies autonomous mission
 | Motors | iFlight XING2 2306, 1855 KV |
 | Flight controller | MicoAir H743 V2 |
 | ESC | MicoAir 55 A, AM32 firmware |
-| Motor protocol | DShot600, bidirectional (eRPM telemetry) |
+| Motor protocol | DShot300, bidirectional (eRPM telemetry) |
 | GNSS / compass | HGLRC M100-5883 |
 | Telemetry | Holybro Telemetry Radio V3 (433 MHz, TX power being reduced to EU limit), MAVLink |
 | RC link | ExpressLRS (CRSF) |

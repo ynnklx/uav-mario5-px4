@@ -15,6 +15,23 @@ git diff --no-index params/<old>.params params/<new>.params
 | File | Firmware | Description | Flown in |
 |---|---|---|---|
 | [`2026-11-05_01_baseline-pre-tune.params`](2026-11-05_01_baseline-pre-tune.params) | PX4 1.17.0 | State after migration, first indoor hover | first hover |
+| [`2026-11-07_02_outdoor-failsafe-dshot300.params`](2026-11-07_02_outdoor-failsafe-dshot300.params) | PX4 1.17.0 | Failsafes for outdoor flight, DShot300, measured rotor geometry | TP-001 |
+
+## Changes 01 → 02
+
+| Area | Parameter | 01 | 02 | Reason |
+|---|---|---|---|---|
+| Motor protocol | `PWM_MAIN_TIM0` | -3 (DShot600) | -4 (DShot300) | recommendation by Chris Rosser: better tunability |
+| Rotor geometry | `CA_ROTOR0..3_PX/PY` | normalised (±1) | measured positions, 0.0875 to 0.0925 m | real frame geometry |
+| Low battery | `COM_LOW_BAT_ACT` | 0 (warning) | 3 (Return at critical, Land at emergency) | outdoor readiness |
+| Geofence | `GF_MAX_HOR_DIST`, `GF_MAX_VER_DIST` | not set | 500 m, 120 m (action: Hold) | outdoor readiness |
+| Switches | `RC_MAP_KILL_SW`, `RC_MAP_RETURN_SW` | ch 6, none | ch 9, ch 10 | dedicated Return switch |
+| Kill → disarm | `COM_KILL_DISARM` | 5 s | 3 s | |
+| RC input | `RC_PORT_CONFIG`, `RC_CRSF_PRT_CFG` | RC port driver | dedicated CRSF driver on UART6, CRSF telemetry off | |
+| GNSS | `GPS_1_GNSS` | 63 (all bits) | 0 (receiver default) | GNSS did not work properly indoors |
+| Calibration | `CAL_*`, `SENS_BOARD_X/Y_OFF` | | gyro, accelerometer, compass and level horizon recalibrated | |
+
+During the change the rotor geometry was first entered with the X signs of rotors 1 and 2 swapped (front-left and rear-left positions exchanged). Found in the parameter diff before flight and corrected; file 02 contains the corrected values.
 
 ## Baseline: notable settings
 

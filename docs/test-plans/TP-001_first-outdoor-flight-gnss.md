@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Status | planned |
-| Parameter set | `params/2026-11-05_01_baseline-pre-tune.params` |
+| Parameter set | `params/2026-11-07_02_outdoor-failsafe-dshot300.params` |
 | Location | outdoor, open field, EU open category A3 |
 | Weather limits | wind max. 5 m/s, no rain |
 | Battery | 6S 1300 mAh LiPo, fully charged |
@@ -16,23 +16,17 @@
 
 ## Background: GNSS configuration
 
-`GPS_1_GNSS = 63` enables all six constellation bits (GPS, SBAS, Galileo, BeiDou, GLONASS, NavIC). The HGLRC M100 is based on a u-blox M10 receiver, which tracks up to four constellations concurrently; NavIC is not among its supported systems. Whether this setting has an effect is to be checked in this test.
-
-| Run | `GPS_1_GNSS` | Systems |
-|---|---|---|
-| A | 63 | as configured |
-| B | 0 | receiver default |
+Indoors the GNSS did not work properly. In parameter set 01, `GPS_1_GNSS = 63` enabled all six constellation bits, including NavIC, which the u-blox M10 in the HGLRC M100 does not support. Parameter set 02 uses the receiver default (`GPS_1_GNSS = 0`). This test checks whether the GNSS works correctly outdoors with this setting.
 
 ## Pre-flight checks
 
-- [ ] Failsafes reviewed: RC loss → Return after 0.5 s (`NAV_RCL_ACT = 2`), return altitude 30 m, low battery → warning only (`COM_LOW_BAT_ACT = 0`)
-- [ ] Arm switch, kill switch and flight mode switch checked on the ground
+- [ ] Failsafes reviewed: RC loss → Return after 0.5 s, return altitude 30 m, battery critical (7 %) → Return, emergency (5 %) → Land, geofence 500 m / 120 m → Hold
+- [ ] Rotor geometry checked in QGroundControl (Actuators), motor test passed
+- [ ] Arm switch, kill switch (ch 9), Return switch (ch 10) and flight mode switch checked on the ground
 - [ ] Telemetry link to QGroundControl stable
 - [ ] Logging active (SD card, `SDLOG_MODE = 0`: from arming to disarming)
 
 ## Procedure
-
-For each run (A, B):
 
 1. Power on, aircraft stationary. Note time to 3D fix, number of satellites, HDOP/EPH in QGroundControl.
 2. Check heading in QGroundControl against the real heading of the aircraft.
