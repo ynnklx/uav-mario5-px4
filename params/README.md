@@ -31,8 +31,6 @@ git diff --no-index params/<old>.params params/<new>.params
 | GNSS | `GPS_1_GNSS` | 63 (all bits) | 0 (receiver default) | GNSS did not work properly indoors |
 | Calibration | `CAL_*`, `SENS_BOARD_X/Y_OFF` | | gyro, accelerometer, compass and level horizon recalibrated | |
 
-During the change the rotor geometry was first entered with the X signs of rotors 1 and 2 swapped (front-left and rear-left positions exchanged). Found in the parameter diff before flight and corrected; file 02 contains the corrected values.
-
 ## Baseline: notable settings
 
 Settings in the baseline that are relevant for the upcoming tuning work.
