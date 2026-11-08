@@ -1,70 +1,43 @@
 # uav-mario5-px4
 
-5" quadcopter migrated from Betaflight to PX4. This repository documents the build, bring-up, flight testing and tuning of the aircraft, including flight logs, parameter history and analysis.
+5" quadcopter, rebuilt from Betaflight to PX4. Goal: a well-tuned, GNSS-capable platform that flies short autonomous missions, then optimising flight time with different propellers and a Li-Ion pack.
 
-The goal is a well-tuned, GNSS-capable 5" platform that flies autonomous missions under PX4, with every change traceable to a test and a measurement.
+![Mario5](photos/2026-11-04_06_assembled.jpg)
 
-## Status
-
-| Phase | State |
-|---|---|
-| Hardware migration to H743 and PX4 | done, 2026-11-05 |
-| Sensor calibration, RC, telemetry, actuator setup | done |
-| First indoor hover | done, 2026-11-06 |
-| Rate controller tuning (PID) | next |
-| Position / altitude controller tuning | planned |
-| Short autonomous mission | planned |
-| Propeller comparison | planned |
-| Li-Ion pack, endurance optimisation | planned |
-
-## Aircraft
+## Hardware
 
 | Component | Part |
 |---|---|
-| Frame | 5" FPV quadcopter frame |
+| Frame | 5" FPV frame |
 | Motors | iFlight XING2 2306, 1855 KV |
 | Flight controller | MicoAir H743 V2 |
-| ESC | MicoAir 55 A, AM32 firmware |
-| Motor protocol | DShot300, bidirectional (eRPM telemetry) |
+| ESC | MicoAir 55 A, AM32, DShot300 bidirectional |
 | GNSS / compass | HGLRC M100-5883 |
-| Telemetry | Holybro Telemetry Radio V3 (433 MHz, TX power being reduced to EU limit), MAVLink |
-| RC link | ExpressLRS (CRSF) |
-| Autopilot | PX4 v1.17.0 |
-| Ground control | QGroundControl (macOS) |
+| Telemetry | Holybro Telemetry Radio V3, 433 MHz, MAVLink (TX power being reduced to EU limit) |
+| RC | ExpressLRS (CRSF) |
 | Battery | 6S 1300 mAh LiPo |
-| Not installed currently | DJI O3 Air Unit |
+| Firmware | PX4 1.17.0, QGroundControl on macOS |
 
-![Mario5 assembled](hardware/photos/2026-11-04_06_assembled.jpg)
+## Status
 
-Details and photos: [`hardware/`](hardware/) · Build log: [`docs/build/01-betaflight-to-px4.md`](docs/build/01-betaflight-to-px4.md)
+| Step | State |
+|---|---|
+| Rebuild and PX4 setup | done |
+| First indoor hover | done, 2026-11-06 |
+| Gyro filter setup | done, 2026-11-08 |
+| First outdoor flight, GNSS check | next |
+| PID tuning | planned |
+| Short autonomous mission | planned |
+| Propeller comparison | planned |
+| Li-Ion pack, flight time | planned |
 
-## Repository layout
+## Contents
 
-```
-LOGBOOK.md           short log of all relevant changes
-hardware/            bill of materials, wiring, build photos
-docs/build/          migration from Betaflight, bring-up notes
-docs/test-plans/     test cards written before each flight test
-docs/test-reports/   results, plots and conclusions after each test
-params/              versioned PX4 parameter sets
-analysis/            Python scripts for ULog analysis and plots
-logs/                selected flight logs (large logs attached to releases)
-```
-
-Change history: [`LOGBOOK.md`](LOGBOOK.md)
-
-## Method
-
-Each optimisation step follows the same cycle:
-
-1. **Test plan**: objective, configuration, procedure, abort criteria, expected result
-2. **Flight test**: flown according to the plan, ULog recorded
-3. **Parameter snapshot**: exported from QGroundControl into `params/`
-4. **Report**: data, plots, findings, decision on the next step
-
-Because every parameter set is versioned, `git diff` between two snapshots shows exactly what changed between two tests.
+- [LOGBOOK.md](LOGBOOK.md): all relevant changes
+- [BUILD.md](BUILD.md): rebuild, wiring, first hover
+- [FILTER.md](FILTER.md): gyro filter setup with spectra
+- [params/](params/): PX4 parameter sets, numbered as referenced in the logbook
 
 ## Licence
 
-- Code, scripts and parameter files: [MIT](LICENSE)
-- Documentation, photos and plots: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+Code and parameter files: [MIT](LICENSE). Documentation, photos and plots: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).

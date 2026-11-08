@@ -1,4 +1,0 @@
-pyulog
-numpy
-pandas
-matplotlib
