@@ -1,7 +1,7 @@
 # Mario5 – Gyro filter (PX4 1.17)
 
-5" quad, MicoAir H743 V2 (BMI088, gyro FIFO 2 kHz), iFlight XING2 2306 1855 KV, AM32 with bidirectional DShot, 6S.
-Control rate: `IMU_GYRO_RATEMAX` 800, effectively 667 Hz (3 FIFO samples per cycle).
+5" quad, 3-blade props
+Control rate: `IMU_GYRO_RATEMAX` 800
 
 ## Values
 
@@ -32,7 +32,6 @@ Filtered gyro (controller input, 667 Hz):
 
 ![Angular velocity PSD](plots/filtered.png)
 
-The line at ~236 Hz is the alias of the 430 Hz resonance (667 − 430 Hz).
 
 ## Logging
 
