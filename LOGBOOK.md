@@ -16,5 +16,4 @@ Relevant changes to the aircraft. Details in the linked files.
 | 2026-11-08 | Filter | ESC RPM notch instead of FFT, static notches at 292 Hz and 370 Hz, gyro LPF 80 → 120 Hz, D-term LPF 20 → 50 Hz. | [FILTER](FILTER.md), [03](params/03_filters.params) |
 | 2026-11-08 | Logging | `SDLOG_PROFILE` 273 for filter analysis. | [03](params/03_filters.params) |
 | 2026-11-08 | Hover | `MPC_THR_HOVER` 0.5 → 0.2. | [03](params/03_filters.params) |
-| 2026-11-08 | RC | CRSF telemetry to transmitter enabled. | [03](params/03_filters.params) |
-| 2026-11-08 | Sensors | Level horizon recalibrated. | [03](params/03_filters.params) |
+
