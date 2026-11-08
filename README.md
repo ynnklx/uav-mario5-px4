@@ -41,6 +41,7 @@ Details and photos: [`hardware/`](hardware/) · Build log: [`docs/build/01-betaf
 ## Repository layout
 
 ```
+LOGBOOK.md           short log of all relevant changes
 hardware/            bill of materials, wiring, build photos
 docs/build/          migration from Betaflight, bring-up notes
 docs/test-plans/     test cards written before each flight test
@@ -49,6 +50,8 @@ params/              versioned PX4 parameter sets
 analysis/            Python scripts for ULog analysis and plots
 logs/                selected flight logs (large logs attached to releases)
 ```
+
+Change history: [`LOGBOOK.md`](LOGBOOK.md)
 
 ## Method
 
