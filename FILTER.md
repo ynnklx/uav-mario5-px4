@@ -28,7 +28,7 @@ Raw gyro (FIFO, before all filters):
 RPM-dependent: motor fundamental (~150–180 Hz) and 3rd harmonic.
 Fixed: resonances at ~290 Hz, ~370 Hz and ~430 Hz.
 
-Filtered gyro (controller input, 667 Hz):
+Filtered gyro:
 
 ![Angular velocity PSD](plots/filtered.png)
 
