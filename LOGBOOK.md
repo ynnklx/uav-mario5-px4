@@ -12,3 +12,4 @@ Relevant changes to the aircraft. Details in the linked files.
 | 2026-11-07 | Failsafe | Low battery: Return / Land. Geofence 500 m / 120 m. Return switch on ch 10, kill switch moved to ch 9. | [02](params/02_outdoor.params) |
 | 2026-11-07 | Sensors | Gyro, accelerometer, compass and level horizon recalibrated. | [02](params/02_outdoor.params) |
 | 2026-11-08 | Filter | ESC RPM notch instead of FFT, static notches at 292 Hz and 370 Hz, gyro LPF 80 → 120 Hz, D-term LPF 20 → 50 Hz. | [FILTER](FILTER.md), [03](params/03_filters.params) |
+| 2026-11-08 | PID | Rate PID tuning started: P/D ratio set, K gains being increased. | in progress |
