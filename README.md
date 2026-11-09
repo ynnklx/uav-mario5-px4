@@ -8,13 +8,13 @@
 
 | Component | Part |
 |---|---|
-| Frame | 5" FPV frame |
+| Frame | 5" SpeedyBee Mario5 FPV frame |
 | Motors | iFlight XING2 2306, 1855 KV |
 | Flight controller | MicoAir H743 V2 |
 | ESC | MicoAir 55 A, AM32, DShot300 bidirectional |
-| GNSS / compass | HGLRC M100-5883 |
-| Telemetry | Holybro Telemetry Radio V3, 433 MHz, MAVLink (TX power being reduced to EU limit) |
-| RC | ExpressLRS (CRSF) |
+| GPS / compass | HGLRC M100-5883 |
+| Telemetry | Holybro Telemetry Radio V3, 433 MHz, MAVLink |
+| RC | ExpressLRS, 2.4 GHz |
 | Battery | 6S 1300 mAh LiPo |
 | Firmware | PX4 1.17.0, QGroundControl on macOS |
 
@@ -25,10 +25,9 @@
 | Rebuild and PX4 setup | done |
 | First indoor hover | done, 2026-11-06 |
 | Gyro filter setup | done, 2026-11-08 |
-| First outdoor flight, GNSS check | next |
-| PID tuning | planned |
+| First outdoor flight, PID tuning | next |
 | Short autonomous mission | planned |
-| Propeller comparison | planned |
+| Propeller comparison (3-blade vs. 2-blade) | planned |
 | Li-Ion pack, flight time | planned |
 
 ## Contents
