@@ -29,6 +29,7 @@
 | Short autonomous mission | planned |
 | Propeller comparison (3-blade vs. 2-blade) | planned |
 | Li-Ion pack, flight time | planned |
+| Raspberry Pi Zero with 4G HAT, camera stream to QGC (RTSP / SRT) | idea |
 
 ## Contents
 
