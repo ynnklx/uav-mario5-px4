@@ -4,7 +4,7 @@ MicoAir H743 V2, PX4 1.17.0
 
 ## sd_bench
 
-`sd_bench`, block size 4096 B
+`sd_bench`
 
 | Card | Type | sd_bench on FC |
 |---|---|---|
