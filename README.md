@@ -37,6 +37,7 @@
 - [LOGBOOK.md](LOGBOOK.md): all relevant changes
 - [BUILD.md](BUILD.md): rebuild, wiring, first hover
 - [FILTER.md](FILTER.md): gyro filter setup with spectra
+- [logging/](logging/): SD card benchmarks and logging rates. SD card: SanDisk Extreme PRO 32 GB, max ~433 KB/s (sd_bench)
 - [params/](params/): PX4 parameter sets, numbered as referenced in the logbook
 
 ## Licence

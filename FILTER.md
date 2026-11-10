@@ -35,7 +35,7 @@ Filtered gyro:
 
 ## Logging
 
-`SDLOG_PROFILE` 273. The board's SD write rate is ~400 KiB/s. With `IMU_GYRO_RATEMAX` 800 the log produces ~340 KiB/s, dropouts below 1 %.
+`SDLOG_PROFILE` 273, `IMU_GYRO_RATEMAX` 800: ~390 KB/s, dropouts typically < 1 %. Details: [logging/](logging/)
 
 ## Open
 
