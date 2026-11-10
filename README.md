@@ -37,6 +37,7 @@
 - [LOGBOOK.md](LOGBOOK.md): all relevant changes
 - [BUILD.md](BUILD.md): rebuild, wiring, first hover
 - [FILTER.md](FILTER.md): gyro filter setup with spectra
+- [logging/](logging/): SD card benchmarks and logging rates
 - [params/](params/): PX4 parameter sets, numbered as referenced in the logbook
 
 ## Licence
