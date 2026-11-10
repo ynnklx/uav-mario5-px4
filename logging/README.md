@@ -4,7 +4,7 @@ MicoAir H743 V2, PX4 1.17.0
 
 ## sd_bench
 
-`sd_bench -r 20`, block size 4096 B
+`sd_bench`, block size 4096 B
 
 | Card | Type | sd_bench on FC |
 |---|---|---|
@@ -15,8 +15,10 @@ MicoAir H743 V2, PX4 1.17.0
 
 ## Logging rates
 
-| Profile | Rate |
-|---|---|
-| `SDLOG_PROFILE` 17 | ~170 KB/s |
-| `SDLOG_PROFILE` 273, `IMU_GYRO_RATEMAX` 800 | ~350 KB/s |
-| `SDLOG_PROFILE` 273, `IMU_GYRO_RATEMAX` 1000 | > ~430 KB/s, dropouts |
+Measured: log file size / log duration
+
+| Profile | Rate | Source |
+|---|---|---|
+| `SDLOG_PROFILE` 17, `IMU_GYRO_RATEMAX` 800 | ~170 KB/s | measured, 13 logs, no dropouts |
+| `SDLOG_PROFILE` 273, `IMU_GYRO_RATEMAX` 800 | ~390 KB/s | measured, 10 logs, dropouts typically < 1 % |
+| `SDLOG_PROFILE` 273, `IMU_GYRO_RATEMAX` 1000 | above SD write limit | estimated; 27 % dropouts in test flight |
